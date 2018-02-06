@@ -1,0 +1,46 @@
+version: '2'
+services:
+    #
+    #  ---> webserver onde a aplicação é executada
+    #       Aqui ficam:
+    #
+    #          - webserver apache
+    #          - plataforma (consultoria e prm "antigo")
+    #
+    webserver:
+        build: ./build/webserver
+        image: evoluttobr/webserver:latest
+        container_name: evolutto_webserver
+        hostname: evolutto_webserver
+        restart: always
+        command: /opt/env-config/autostart.sh
+        ports:
+            - "8090:443"
+            - "8091:81"
+        depends_on:
+          - dbmaster
+          - dbmongo
+        volumes:
+            - ../../api:/opt/api
+            - ../../frontend:/opt/frontend
+
+
+
+    #
+    #  ---> banco de dados principal (mysql)
+    #
+    dbmaster:
+        build: ./build/dbmaster
+        image: evoluttobr/dbmaster:latest
+        container_name: evolutto_dbmaster
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: symfony
+            MYSQL_USER: symfony
+            MYSQL_PASSWORD: symfony
+
+        volumes:
+          - ${EVOLUTTO_PLATAFORMA_MYSQL_DATA_DIR}:/var/lib/mysql
+          - ${EVOLUTTO_PLATAFORMA_MYSQL_SHARE_DIR}:/opt/shared
