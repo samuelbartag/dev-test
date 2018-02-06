@@ -24,7 +24,21 @@ O sistema manterá um simples cadastro de eventos. Cada evento armazenará conte
 sendo que cada um deve ser expresso por um campo de texto puro.
 
 A API, criada em framework para PHP [Symfony versão 3.4](https://symfony.com/download),
-deve ser documentada aqui,  [neste documento](./docs/API.md)
+deve ser documentada aqui,  [neste documento](./docs/API.md). 
+Documente os endpoints que você utilizar necessário, informando como os mesmos devem
+ser executados, que parâmetros devem receber e quais a respostas esperadas, incluindo códigos
+de erro.
+
+O FRONTEND deve ser criado utilizando o framework React. Há um esqueleto de aplicação
+disponivel para desenvolvimento do mesmo.   
+
+
+#### Estrutura da aplicação
+
+A aplicação, vista do frontend, deve ser um SPA (Single Page Application) com as seguintes funcionalidades.
+
+- listagem mostrando os próximos eventos
+
 
 
 
@@ -42,6 +56,10 @@ instalados em seu PC
 
 As instruções de instalação variam conforme o sistema operacional utilizado.
 [Veja um tutorial de como instalar no Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/como-instalar-e-usar-o-docker-no-ubuntu-16-04-pt).
+
+
+Para iniciar o desenvolvimento crie um fork deste respositório Github e faça
+um clone do mesmo em sua máquina.
 
 
 Para iniciar a execução da aplicação/ambiente de desenvolvimento, em geral, utilize os 
