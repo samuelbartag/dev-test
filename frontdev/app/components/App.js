@@ -6,20 +6,20 @@ const App = () => {
     <div>
       <h2 id="heading">Hello ReactJS</h2>
 
-    <p>Bem vindo(a)!
+      <p>Bem vindo(a)!
         Começe a criar nosso sistema de gestão de eventos modificando scripts da
-        pasta <b>frontdev/app</b>b>.
-    </p>
+        pasta <b>frontdev/app</b>.
+      </p>
 
-    <p>Este script, por exemplo, fica em <b>/frontdev/app/components/App.js</b>.</p>
+      <p>Este script, por exemplo, fica em <b>/frontdev/app/components/App.js</b>.</p>
 
-    <p>Sempre que você fizer modificações, as mesmas serão automaticamente compiladas
-        e atualizadas no browser.
-    </p>
+      <p>Sempre que você fizer modificações, as mesmas são atualizadas no browser.
+      </p>
 
-    <p>
+      <p>
         Divirta-se!
-    </p>
+      </p>
+
       <img
         className="image"
         style={{ margin: '0.5em' }}
