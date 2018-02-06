@@ -7,11 +7,11 @@ services:
     #          - webserver apache
     #          - plataforma (consultoria e prm "antigo")
     #
-    webserver:
+    api:
         build: ./build/webserver
-        image: evoluttobr/webserver:latest
-        container_name: evolutto_webserver
-        hostname: evolutto_webserver
+        image: evoluttobr/api:latest
+        container_name: api
+        hostname: api
         restart: always
         command: /opt/env-config/autostart.sh
         ports:
@@ -19,11 +19,9 @@ services:
             - "8091:81"
         depends_on:
           - dbmaster
-          - dbmongo
         volumes:
-            - ../../api:/opt/api
-            - ../../frontend:/opt/frontend
-
+            - ../api:/opt/api
+            - ../frontend:/opt/frontend
 
 
     #
@@ -32,7 +30,7 @@ services:
     dbmaster:
         build: ./build/dbmaster
         image: evoluttobr/dbmaster:latest
-        container_name: evolutto_dbmaster
+        container_name: dbmaster
         ports:
             - "3306:3306"
         environment:
@@ -42,5 +40,27 @@ services:
             MYSQL_PASSWORD: symfony
 
         volumes:
-          - ${EVOLUTTO_PLATAFORMA_MYSQL_DATA_DIR}:/var/lib/mysql
-          - ${EVOLUTTO_PLATAFORMA_MYSQL_SHARE_DIR}:/opt/shared
+          # aqui fica o diretorio de dados da base mysql
+          - ../data/mysql:/var/lib/mysql
+
+          # essa pasta é montada para compartilhar dados entre o host e o container
+          - ../data/shared:/opt/shared
+
+
+    #
+    #   ---> ambiente de desenvolvimento para o frontend
+    #
+    frontdev:
+        build: ./build/frontdev
+        image: omar331/frontdev:0.2
+        container_name: frontdev
+        hostname: frontdev
+        restart: always
+        command: /opt/scripts/start-dev-server.sh
+        ports:
+            - "7000:8080"
+        volumes:
+            - ../frontdev:/opt/dev
+
+
+
