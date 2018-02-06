@@ -27,7 +27,9 @@ const config = {
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'build'),
-    publicPath: '/'
+    publicPath: '/',
+    port: 7000,
+    host: "0.0.0.0"
   },
 
   module: {
@@ -141,7 +143,6 @@ const config = {
     new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin({ filename: './styles/style.css', disable: false, allChunks: true }),
     new CopyWebpackPlugin([{ from: 'vendors', to: 'vendors' }]),
-    new OpenBrowserPlugin({ url: 'http://localhost:8080' }),
     new webpack.HotModuleReplacementPlugin(),
   ],
 };

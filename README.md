@@ -1,6 +1,6 @@
+## Teste para desenvolvedor Evolutto
 
-
-Bem vindo(a) este é um pequeno teste para avaliar suas habilidades como desenvolvedor.
+Bem vindo(a)! Este é um pequeno teste para avaliar suas habilidades como desenvolvedor.
 
 
 
@@ -83,12 +83,21 @@ Para iniciar o ambiente de desenvolvimento para o **frontend**, utilize
 docker-compose up frontdev
 ```
 
+O ambiente será então acessível através do browser pela URL
+
+```
+http://localhost:7000/
+```
+
 A estrutura do ambiente de desenvolvimento para o frontend foi baseada no
 seguinte __boilerplate__
 
 ```
 https://github.com/KleoPetroff/react-webpack-boilerplate
 ```
+
+Agora você pode modificá-la a vontade.
+
 
 
 

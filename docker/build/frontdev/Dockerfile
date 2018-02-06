@@ -14,4 +14,4 @@ RUN npm install babel webpack webpack-dev-server -g
 RUN mkdir -p /opt/scripts
 COPY ./start-dev-server.sh /opt/scripts
 
-EXPOSE 8080
+EXPOSE 7000

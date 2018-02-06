@@ -58,7 +58,7 @@ services:
         restart: always
         command: /opt/scripts/start-dev-server.sh
         ports:
-            - "7000:8080"
+            - "7000:7000"
         volumes:
             - ../frontdev:/opt/dev
 
