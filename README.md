@@ -31,9 +31,9 @@ sendo que cada um deve ser expresso por um campo de texto puro.
 
 A API, criada em framework para PHP [Symfony versão 3.4](https://symfony.com/download),
 deve ser documentada aqui,  [neste documento](./docs/API.md). 
-Documente os endpoints que você utilizar necessário, informando como os mesmos devem
-ser executados, que parâmetros devem receber e quais a respostas esperadas, incluindo códigos
-de erro.
+Documente os endpoints que você considerar necessários para atingir os objetivos aplicação, informando como os 
+mesmos devem ser invocados, que parâmetros devem receber e quais as respostas possíveis e esperadas, incluindo eventuais 
+códigos de erro.
 
 O FRONTEND deve ser criado utilizando o framework React. Há um esqueleto de aplicação
 disponivel para desenvolvimento do mesmo.   
@@ -45,8 +45,14 @@ A aplicação, vista do frontend, deve ser um SPA (Single Page Application) com 
 
 - listagem mostrando os próximos eventos, com a possibilidade de filtrar por intervalo de datas.
 - tela para cadastramento de um novo evento. Possibilidade de adicionar participantes. Deve haver um botão 
-  **(+) participante**. Na lista de participantes deve haver um botão "(-)" participante para cada item da lista.
-- em cada item da lista de eventos deve haver as opções de **editar evento** e **excluir evento**.
+  "**(+) participante**". Na lista de participantes deve haver um botão "**(-) participante**" para cada item da lista.
+- no cadastro de um novo evento, os dados devem ser validados no frontend, durante a digitação dos dados no formulário.
+  Não devem ser aceitos eventos em datas passadas. A descrição do evento não pode ficar também não pode ficar vazia.   
+- em cada item da lista de eventos deve haver as opções de "**editar evento**" e "**excluir evento**".
+
+Todas as operações mencionadas acima devem ser executadas na API e os resultados da mesma devem ser refletir 
+consistentemente no frontend. 
+
 
 
 #### Pontos extras
