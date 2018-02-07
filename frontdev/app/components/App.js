@@ -13,7 +13,8 @@ const App = () => {
 
       <p>Este script, por exemplo, fica em <b>/frontdev/app/components/App.js</b>.</p>
 
-      <p>Sempre que você fizer modificações, as mesmas são atualizadas no browser.
+      <p>Sempre que você fizer modificações, as mesmas são atualizadas no browser. Qualquer browser.
+        Veja vc mesmo.
       </p>
 
       <p>

@@ -10,7 +10,6 @@ do protocolo HTTP. Utilize uma convenção de nomenclatura amigável.
 
 
 
-
 #### Listar eventos
 
 

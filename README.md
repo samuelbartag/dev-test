@@ -1,7 +1,13 @@
 ## Teste para desenvolvedor Evolutto
 
-Bem vindo(a)! Este é um pequeno teste para avaliar suas habilidades como desenvolvedor.
+Bem vindo(a)! Este é um pequeno teste para avaliar suas habilidades como desenvolvedor. Embora se trate de uma aplicação
+simples, a mesma cobre diversas frentes de desenvolvimento usadas em nosso dia a dia, como frontend, backend, API,
+infraestrutura e automatização de processos.
 
+Além das competências técnicas e raciocínio lógico, neste teste procuramos avaliar suas habilidades para encontrar 
+conhecimentos e soluções para a integração das várias partes compõe uma aplicação.
+
+Desejamos a você, bom teste e sucesso!
 
 
 ### Descrição do projeto
@@ -37,16 +43,28 @@ disponivel para desenvolvimento do mesmo.
 
 A aplicação, vista do frontend, deve ser um SPA (Single Page Application) com as seguintes funcionalidades.
 
-- listagem mostrando os próximos eventos
+- listagem mostrando os próximos eventos, com a possibilidade de filtrar por intervalo de datas.
+- tela para cadastramento de um novo evento. Possibilidade de adicionar participantes. Deve haver um botão 
+  **(+) participante**. Na lista de participantes deve haver um botão "(-)" participante para cada item da lista.
+- em cada item da lista de eventos deve haver as opções de **editar evento** e **excluir evento**.
 
 
+#### Pontos extras
 
+As funcionalidades a seguir não são obrigatórias, mas contam como pontos extras em sua avaliação
 
+- **conectar com o Facebook** - colocar um botão na aplicação que ao ser clicado, coleta os dados básicos da conta no 
+  Facebook e os guarda na aplicação, exibindo-os no topo da tela
+- **testes unitários para API**
+- **testes funcionais para API**   
+- **testes unitários para o frontend**
 
 
 ### Ambiente de desenvolvimento
 
-O esqueleto da aplicação está estruturado em [containers Docker](https://www.docker.com/docker-community).
+Para você iniciar e desenvolver, oferecemos um esqueleto para desenvolvimento da API e do frontend.
+Este esqueleto está estruturado em [containeres Docker](https://www.docker.com/docker-community), que podem facilmente
+ser replicados em seu PC.
 
 Para que você possa utilizá-lo, é necessário que os seguintes softwares estejam
 instalados em seu PC 
@@ -116,6 +134,16 @@ https://github.com/KleoPetroff/react-webpack-boilerplate
 
 Agora você pode modificá-la a vontade.
 
+Embora você esteja livre para utilizar as bibliotecas de javascript e React que considerar convenientes, sugerimos algumas
+com base em nosssa experiência
+
+- [**react-bootstrap**](https://react-bootstrap.github.io/) - incorpora de maneira transparente os componentes do Twitter 
+  Bootstrap.
+- [**superagent**](https://visionmedia.github.io/superagent/) - client http para realizar chamadas ajax para a API
+- [**superagent-mocker**](https://www.npmjs.com/package/superagent-mocker) - mockup para o endpoints da API. Para agilizar
+  o desenvolvimento do frontend.
+
+
 
 
 
@@ -133,5 +161,27 @@ para este servidor.
 Este endereço acessa o servidor Apache que funciona dentro do container
 **api**.
 
+
+
+### Deployment do frontend
+
+Quando frontend estiver maduro, a aplicação deve ser copiada para a pasta **frontend**, a partir de onde a mesma será 
+acessível a partir do mesmo container onde está a API e o webserver.
+
+Crie um script realizar esse deploy de maneira automatizada.
+
+
+
+### Submetendo o projeto para nossa avaliação
+
+Preencha a seção **Como executar a aplicação**, que está logo a seguir com as instruções de como instalar a aplicação
+e executar em uma máquina qualquer, especificando quais são os requisitos necessários para executar.
+
+Crie um projeto no Github e nos passe a URL :)  
+
+
+### Como executar a aplicação
+
+(esta seção deve ser escrita por você. Como faço para executar sua aplicação.)
 
 
