@@ -20,6 +20,9 @@
     "linebreak-style": "off",
     "global-require": "off",
     "semi": "warn",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "no-console": "off",
+    "no-alert": "off",
+    "class-methods-use-this": "off",
   }
 }
